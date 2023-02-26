@@ -9,7 +9,7 @@ body {
   font-weight: 400;
   padding-top: 30px;
   padding-bottom: 30px;
-  background: #1F1F2D;
+  background: radial-gradient(circle at 50% 115%, #8AB7FF 0%, transparent 20%), #1F1F2D;
   background-repeat: no-repeat;
   overflow-x: hidden; }
 
@@ -121,7 +121,8 @@ main {
   .hero .hero-container {
     display: flex;
     flex-direction: row;
-    gap: 10%; }
+    gap: 10%;
+    max-width: 1300px; }
     .hero .hero-container .hero-description {
       display: flex;
       flex-direction: column;
