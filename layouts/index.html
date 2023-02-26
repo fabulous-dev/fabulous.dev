@@ -1,11 +1,141 @@
 {{ define "main" }}
+{{ $hero := resources.Get "images/hero.png" }}
+{{ $expressiveViews := resources.Get "images/expressive-views.svg" }}
+{{ $mvu := resources.Get "images/mvu.svg" }}
+{{ $fsharp := resources.Get "images/fsharp.svg" }}
+{{ $dotnetEcosystem := resources.Get "images/dotnet-ecosystem.svg" }}
+{{ $xamarinLogo := resources.Get "images/xamarin.svg" }}
+{{ $mauiLogo := resources.Get "images/maui.svg" }}
+{{ $avaloniaLogo := resources.Get "images/avalonia.svg" }}
+
     <section class="hero">
-        <h1>Declarative framework for multi-platform apps with .NET</h1>
-        <h2>Fabulous aims to bring you a great development experience and confidence in your code by combining an expressive UI syntax, the simple & robust Model-View-Update (MVU) architecture, and functional programming.</h2>
+        <div class="hero-container">
+            <div class="hero-description">
+                <h1>Build reliable multi-platform apps effortlessly.</h1>
+                <p>Fabulous empowers you to create amazing and reliable apps with ease by unleashing the power of declarative UI and functional programming.</p>
+                <a class="button" href="https://docs.fabulous.dev/v2/getting-started/">Get started</a>
+            </div>
+            <img class="hero-image" src="{{ $hero.RelPermalink }}" />
+        </div>
     </section>
-    <section class="content-container">
-        <section class="declarative-ui">Declarative UI</section>
-        <section class="mvu">MVU architecture</section>
-        <section class="dotnet">Powered by .NET</section>
+    <section class="body">
+        <section id="declarative-ui" class="content">
+            <div class="content-container">
+                <div class="content-description">
+                    <hgroup>
+                        <h3>Declarative UI</h3>
+                        <h2>Expressive, flexible, and maintainable views</h2>
+                    </hgroup>
+                    <p>Describe how your app should look rather than the steps required to create it. Fabulous will make sure your users always see the latest state of your app.</p>
+                </div>
+                <img class="content-image" src="{{ $expressiveViews.RelPermalink }}" />
+            </div>
+        </section>
+        <section id="mvu" class="content">
+            <div class="content-container">
+                <div class="content-description">
+                    <hgroup>
+                        <h3>Model-View-Update</h3>
+                        <h2>Simple and robust architecture</h2>
+                    </hgroup>
+                    <p>MVU makes it easier to reason about the behavior of your application by separating the state and logic from the UI representation.</p>
+                    <a href="https://zaid-ajaj.github.io/the-elmish-book/#/chapters/elm/">Learn more</a>
+                </div>
+                <img class="content-image" src="{{ $mvu.RelPermalink }}" />
+            </div>
+        </section>
+        <section id="functional-programming" class="content">
+            <div class="content-container">
+                <div class="content-description">
+                    <hgroup>
+                        <h3>Functional programming</h3>
+                        <h2>A great paradigm for building apps</h2>
+                    </hgroup>
+                    <p>The state of the app can change frequently and rapidly due to user interactions and events. F# can help manage this complexity by making it clear how the state changes and making it easier to test the different states.</p>
+                    <a href="https://dotnet.microsoft.com/languages/fsharp">Learn more</a>
+                </div>
+                <img class="content-image" src="{{ $fsharp.RelPermalink }}" />
+            </div>
+        </section>
+        <section id="dotnet" class="content">
+            <div class="content-container">
+                <div class="content-description">
+                    <hgroup>
+                        <h3>Great ecosystem</h3>
+                        <h2>Powered by .NET</h2>
+                    </hgroup>
+                    <p>.NET is a mature and wildly adopted ecosystem. It provides a wide range of tools and frameworks, as well as a large and active community that provides support and resources.</p>
+                    <a href="https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet">Learn more</a>
+                </div>
+                <img class="content-image" src="{{ $dotnetEcosystem.RelPermalink }}" />
+            </div>
+        </section>
+        <section id="community" class="community">
+            <div class="community-container">
+                <section class="content">
+                    <div class="content-container no-image">
+                        <div class="content-description">
+                            <hgroup>
+                                <h3>Built in the open</h3>
+                                <h2>Join the Fabulous community</h2>
+                            </hgroup>
+                            <p>Started in 2018 in the <a href="https://github.com/fsprojects">F# Community Incubation Space</a>, Fabulous has been open source since the beginning and is always looking for new contributors.</p>
+                            <p>Did you find an issue, have a feature request, or want to participate to the future of Fabulous? Head to our GitHub repository.</p>
+                            <a href="https://github.com/fabulous-dev/Fabulous/blob/main/CONTRIBUTING.md">Start contributing</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="content">
+                    <div class="content-container no-image">
+                        <div class="content-description">
+                            <hgroup>
+                                <h3>Sponsoring & Services</h3>
+                                <h2>Support Fabulous</h2>
+                            </hgroup>
+                            <p>Fabulous is not a commercial product and is being built on the free time of everyone involved.</p>
+                            <p>Either you are a company using Fabulous or simply want to support all the efforts going into Fabulous, you can sponsor us via the GitHub Sponsors program.</p>
+                            <a href="https://github.com/fabulous-dev/Fabulous">Support us on GitHub</a>
+                            <p>Looking for support? We can provide you with paid services to help you build your apps.</p>
+                            <a href="mailto:maintainers@fabulous.dev">Commercial support</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="callout">
+            <div>
+                <h2>Choose your own adventure</h2>
+                <p>Fabulous brings declarative UI and functional programming to existing .NET UI frameworks. <br/> You can choose the one that fits your needs best.</p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/fabulous-dev/Fabulous.MauiControls">
+                            <img src="{{ $mauiLogo.RelPermalink }}" />
+                            <p>.NET MAUI</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/fabulous-dev/Fabulous.XamarinForms">
+                            <img src="{{ $xamarinLogo.RelPermalink }}" />
+                            <p>Xamarin.Forms</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/fabulous-dev/Fabulous.Avalonia">
+                            <img src="{{ $avaloniaLogo.RelPermalink }}" />
+                            <p>Avalonia</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <section class="get-started">
+        <div>
+            <h2>Build reliable multi-platform apps with <i class="emphasis">Fabulous</i></h2>
+            <div class="actions">
+                <a class="button" href="https://docs.fabulous.dev/v2/getting-started/">Get started</a>
+                <a class="button outlined" href="https://docs.fabulous.dev">Read docs</a>
+            </div>
+        </div>
     </section>
 {{ end }}

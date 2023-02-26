@@ -1,0 +1,344 @@
+@import 'colors', 'fonts';
+
+$page-padding-left: 8%;
+$page-padding-right: 8%;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: $page-font-family;
+}
+
+body {
+    color: $page-text-color;
+    font-size: $page-font-size;
+    font-weight: $page-font-weight;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background: $page-background-color;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    font-weight: $h1-font-weight;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    font-weight: $h2-font-weight;
+}
+
+h3 {
+    color: $h3-text-color;
+    font-size: $h3-font-size;
+    font-weight: $h3-font-weight;
+}
+
+a {
+    color: $page-text-color;
+    font-weight: $link-font-weight;
+
+    &:hover {
+        color: $link-hover-text-color;
+    }
+
+    &.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $button-background-color;
+        color: $button-text-color;
+        font-size: $button-font-size;
+        font-weight: $button-font-weight;
+        text-decoration: none;
+        border-radius: 8px;
+        min-width: 160px;
+        height: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    
+        &.outlined {
+            background-color: $outlined-button-background-color;
+            border: 1px solid $outlined-button-border-color;
+            color: $outlined-button-text-color;
+        }
+
+        &:hover {
+            filter: drop-shadow(2px 2px 10px $shadow-color);
+        }
+    }
+}
+
+header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: $page-padding-left;
+    padding-right: $page-padding-left;
+
+    .left-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+
+        .logo {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: $page-text-color;
+                font-family: $logo-font-family;
+                font-size: $logo-font-size;
+                font-weight: $logo-font-weight;
+                text-decoration: none;
+    
+                img {
+                    height: 55px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .right-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+
+        .menu-item {
+            color: $page-text-color;
+            font-size: $menu-item-font-size;
+            font-weight: $menu-item-font-weight;
+            text-decoration: none;
+
+            &:hover {
+                color: $link-hover-text-color;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: $page-padding-left;
+    padding-right: $page-padding-left;
+
+    .footer-social {
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            list-style: none;
+
+            font-size: 1.5em;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    padding-top: 150px;
+    padding-bottom: 300px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: $page-padding-left;
+    padding-right: $page-padding-left;
+
+    .hero-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+
+        .hero-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+    
+            p {
+                max-width: 75%;
+                margin-bottom: 30px;
+            }
+        }
+    
+        .hero-image {
+            object-fit: contain;
+            max-width: 40%;
+        }
+    }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: $page-padding-left;
+        padding-right: $page-padding-left;
+        
+        .content-container {
+            max-width: 1300px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 10%;
+
+            .content-description {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 30px;
+            }
+
+            .content-image {
+                max-width: 40%;
+            }
+
+            &.no-image {
+                flex-direction: row;
+                justify-content: center;
+
+                .content-description {
+                    max-width: unset;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            .content-container {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .community {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: $page-padding-left;
+        padding-right: $page-padding-left;
+
+        .community-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1300px;
+            gap: 10%;
+
+            .content {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+    }
+
+    .callout {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        div {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+            padding: 50px 100px;
+            background-color: $callout-background-color;
+            border-radius: 18px;
+            max-width: 600px;
+
+            &:hover {
+                filter: drop-shadow(4px 4px 30px $shadow-color);
+            }
+
+            ul {
+                padding-top: 20px;
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                justify-content: space-between;
+
+                li {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        color: $page-text-color;
+                        text-decoration: none;
+                        align-items: center;
+                        gap: 15px;
+                        
+                        img {
+                            height: 100px;
+                            width: 100px;
+                            object-fit: contain;
+                        }
+
+                    } 
+                }
+            }
+        }
+    }
+}
+
+.get-started {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    div {
+        max-width: 600px;
+        text-align: center;
+        gap: 60px;
+        display: flex;
+        flex-direction: column;
+
+        i {
+            font-style: normal;
+            color: $emphasis-text-color;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+}
+
+
+
+
+
+// @media only screen and (max-width: 1440px) {
+//     header, footer, .hero, .body .content, .body .community {
+//         padding-left: 35px;
+//         padding-right: 35px;
+//     }
+// }
+
+// @media only screen and (max-width: )

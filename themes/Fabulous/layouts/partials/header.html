@@ -1,22 +1,24 @@
+{{ $logo := resources.Get "images/logo.svg" }}
+{{ $githubLogo := resources.Get "images/github.svg" }}
+
 <header>
-    <div class="logo-container">
+    <div class="left-menu">
         <div class="logo">
             <a href="/">
-                <img src="{{ .Site.Params.LogoSrc }}" alt="Fabulous" />
+                <img src="{{ $logo.RelPermalink }}" alt="Fabulous" />
+                Fabulous
             </a>
         </div>
-
-        <div class="tray">
-            <nav role="navigation">
-                <ul>
-                    <li>Development</li>
-                    <li>Community</li>
-                    <li>Showcase</li>
-                    <li>Docs</li>
-                </ul>
-            </nav>
-            <a class="button" href="{{ .Site.Params.GetStartedLink }}">Get started</a>
-            <a class="button" href="{{ .Site.Params.GitHubLink }}">GitHub</a>
+        <div class="menu">
+            <a class="menu-item" href="https://docs.fabulous.dev">Documentation</a>
+            <a class="menu-item" href="https://fabulous.dev/about" style="display: none;">About</a>
+            <a class="menu-item" href="mailto:maintainers@fabulous.dev">Contact us</a>
+        </div>
+    </div>
+    <div class="right-menu">
+        <div class="menu">
+            <a href="https://github.com/fabulous-dev/Fabulous"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.gg/bpTJMbSSYK"><i class="fa-brands fa-discord"></i></a>
         </div>
     </div>
 </header>

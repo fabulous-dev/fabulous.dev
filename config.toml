@@ -1,10 +1,10 @@
 baseURL = 'https://fabulous.dev'
 languageCode = 'en-us'
-title = 'Fabulous - Declarative framework for multi-platform apps with .NET'
+title = 'Fabulous - Build reliable multi-platform apps effortlessly'
 theme = 'Fabulous'
 
 [params]
-    Description = 'Fabulous aims to bring you a great development experience and confidence in you code by combining an expressive UI syntax, the simple & robust Model-View-Update (MVU) architecture, and functional programming'
+    Tagline = 'Build reliable multi-platform apps effortlessly'
+    Description = 'Unleashing the power of declarative UI and functional programming, Fabulous empowers you to create amazing and reliable apps with ease. Target Android, iOS, macOS, Windows and more.'
     GetStartedLink = 'https://docs.fabulous.dev/get-started'
     GitHubLink = 'https://github.com/fabulous-dev/Fabulous'
-    LogoSrc = 'https://raw.githubusercontent.com/fabulous-dev/Fabulous/v2.1/logo/logo-title.png'
