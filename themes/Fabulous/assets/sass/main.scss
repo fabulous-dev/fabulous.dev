@@ -16,7 +16,9 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
 
-    background: $page-background-color;
+    background:
+        radial-gradient(circle at 50% 115%, #8AB7FF 0%, transparent 20%),
+        $page-background-color;
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
@@ -167,6 +169,7 @@ main {
         display: flex;
         flex-direction: row;
         gap: 10%;
+        max-width: 1300px;
 
         .hero-description {
             display: flex;
