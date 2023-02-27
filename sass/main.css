@@ -233,7 +233,7 @@ main {
       justify-content: center;
       gap: 50px; }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 428px) {
   header .left-menu .logo img {
     height: 40px; }
   header .left-menu .logo a {
