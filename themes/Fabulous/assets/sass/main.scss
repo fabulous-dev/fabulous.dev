@@ -469,13 +469,18 @@ main {
         }
     }
 
-    .get-started div {
-        max-width: 100%;
+    .get-started {
+        padding-left: 8%;
+        padding-right: 8%;
 
-        .actions {
-            flex-direction: column;
-            gap: 24px;
-            align-items: center;
+        div {
+            max-width: 100%;
+
+            .actions {
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
         }
     }
 
