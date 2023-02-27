@@ -41,7 +41,7 @@ a {
     font-weight: 700;
     text-decoration: none;
     border-radius: 8px;
-    min-width: 160px;
+    width: 160px;
     height: 50px;
     padding-left: 15px;
     padding-right: 15px; }
@@ -232,3 +232,79 @@ main {
       flex-direction: row;
       justify-content: center;
       gap: 50px; }
+
+@media only screen and (max-width: 375px) {
+  header .left-menu .logo img {
+    height: 40px; }
+  header .left-menu .logo a {
+    font-size: 24px; }
+  header .menu {
+    display: none; }
+  h1 {
+    font-size: 30px; }
+  h2 {
+    font-size: 28px; }
+  h3 {
+    font-size: 18px; }
+  body {
+    font-size: 15px;
+    background: radial-gradient(circle at 50% 102%, #8AB7FF 0%, transparent 5%), #1F1F2D; }
+  a.button {
+    font-size: 16px; }
+  main {
+    padding-top: 36px;
+    padding-bottom: 120px;
+    gap: 80px; }
+  .hero .hero-container {
+    flex-direction: column-reverse;
+    gap: 15px; }
+    .hero .hero-container .hero-description p {
+      max-width: 100%;
+      margin-bottom: 15px; }
+    .hero .hero-container .hero-image {
+      max-width: 100%; }
+  .body {
+    gap: 80px; }
+    .body .content .content-container {
+      flex-direction: column-reverse;
+      gap: 30px; }
+      .body .content .content-container .content-image {
+        max-width: 100%; }
+    .body .content:nth-child(even) .content-container {
+      flex-direction: column-reverse; }
+    .body .community .community-container {
+      flex-direction: column;
+      gap: 80px; }
+    .body .callout {
+      padding-left: 8%;
+      padding-right: 8%; }
+      .body .callout div {
+        max-width: 100%;
+        padding: 25px;
+        gap: 15px; }
+        .body .callout div h2 {
+          font-size: 18px;
+          font-weight: 700; }
+        .body .callout div p {
+          text-align: start; }
+        .body .callout div ul {
+          padding-top: 8px;
+          gap: 20px; }
+          .body .callout div ul li a {
+            gap: 8px; }
+            .body .callout div ul li a img {
+              width: 50px;
+              height: 50px; }
+            .body .callout div ul li a p {
+              font-size: 11px; }
+  .get-started div {
+    max-width: 100%; }
+    .get-started div .actions {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center; }
+  footer .design-by a {
+    font-size: 12px; }
+  footer .footer-social ul {
+    font-size: 1.25em;
+    gap: 25px; } }
