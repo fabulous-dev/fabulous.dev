@@ -297,12 +297,15 @@ main {
               height: 50px; }
             .body .callout div ul li a p {
               font-size: 11px; }
-  .get-started div {
-    max-width: 100%; }
-    .get-started div .actions {
-      flex-direction: column;
-      gap: 24px;
-      align-items: center; }
+  .get-started {
+    padding-left: 8%;
+    padding-right: 8%; }
+    .get-started div {
+      max-width: 100%; }
+      .get-started div .actions {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center; }
   footer .design-by a {
     font-size: 12px; }
   footer .footer-social ul {
