@@ -12,12 +12,12 @@
 }
 
 body {
-    @include background-page;
+    position: relative;
+    //@include background-page;
+    background-color: $primary-color;
     color: $full-white;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    //overflow-y: hidden;
 }
 
 h1 {
@@ -64,12 +64,43 @@ a {
     }
 }
 
+.spotlights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .spotlight {
+        position: absolute;
+        border-radius: 9999px;
+        z-index: -1;
+    }
+
+    #spotlight-top {
+        top: -85px;
+        right: -156px;
+        width: 200px;
+        height: 300px;
+        filter: blur(72px);
+        background-color: #9185E6CC;
+    }
+
+    #spotlight-bottom {
+        bottom: -240px;
+        width: 360px;
+        height: 360px;
+        filter: blur(65px);
+        background-color: #8AB7FF;
+    }
+}
+
 header {
     height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     @include padding-page;
+    padding-top: 30px;
 
     .left-menu {
         display: flex;
@@ -189,6 +220,40 @@ main {
                     width: 264px;
                     height: 264px;
                     align-self: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            &#declarative-ui {
+                .content-image {
+                    width: 261px;
+                    height: 264px;
+                }
+            }
+
+            &#mvu {
+                .content-image {
+                    width: 270px;
+                    height: 108px;
+                }
+            }
+
+            &#functional-programming {
+                .content-image {
+                    width: 191px;
+                    height: 188px;
+                }
+            }
+
+            &#dotnet {
+                .content-image {
+                    width: 194px;
+                    height: 177px;
                 }
             }
         }
@@ -294,6 +359,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     @include padding-page;
+    padding-bottom: 30px;
 
     .footer-social {
         ul {
