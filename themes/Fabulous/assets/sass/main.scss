@@ -172,10 +172,52 @@ main {
             }
     
             .hero-image {
+                position: relative;
                 width: 320px;
                 height: 255px;
-                object-fit: contain;
                 align-self: center;
+                overflow: hidden;
+
+                @keyframes slideInFromTop {
+                    100% {
+                        bottom: 0px;
+                    }
+                }
+
+                img {
+                    object-fit: contain;
+                }
+
+                #hero-1 {
+                    position: absolute;
+                    width: 311px;
+                    height: 220px;
+                    top: 0px;
+                    bottom: 40px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+
+                    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+                }
+
+                #hero-2 {
+                    position: absolute;
+                    width: 72px;
+                    height: 152px;
+                    right: 76px;
+                    bottom: 75px;
+
+                    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+                }
+
+                #hero-3 {
+                    position: absolute;
+                    width: 72px;
+                    height: 152px;
+                    right: 0px;
+                    bottom: 50px;
+                    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+                }
             }
         }
 
@@ -195,6 +237,7 @@ main {
         margin-top: 108px;
         margin-bottom: 108px;
         gap: 88px;
+        overflow: hidden;
 
         .content {
             position: relative;
