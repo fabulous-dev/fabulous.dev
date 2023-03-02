@@ -47,3 +47,7 @@ $bold: 700;
     @media (max-width: 699px) { font: $semibold 23px /1.4 $jost; }
     @media (min-width: 700px) { font: $semibold 34px /1.4 $jost; }
 }
+
+@mixin font-menu {
+    font: $semibold 18px /1.4 $poppins;
+}

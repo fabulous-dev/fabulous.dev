@@ -16,6 +16,7 @@ body {
     background-color: $primary-color;
     color: $full-white;
     background-repeat: no-repeat;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
@@ -96,49 +97,134 @@ header {
     height: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     @include padding-page;
     padding-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 
-    .left-menu {
-        display: flex;
-        flex-direction: row;
+    .logo {
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            @include font-fabulous;
+            text-decoration: none;
 
-        .logo {
-            a {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 10px;
-                @include font-fabulous;
-                text-decoration: none;
-    
-                img {
-                    height: 40px;
-                    width: 40px;
-                    object-fit: contain;
+            img {
+                height: 40px;
+                width: 40px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    #menu-button {
+        #menu-button-checkbox {
+            display: none;
+        }
+
+        label {
+            display: block;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover div {
+                background-color: $secondary-color-1;
+            }
+
+            div {
+                position: relative;
+                top: 0;
+                height: 6px;
+                background-color: white;
+                margin-bottom: 6px;
+                border-radius: 4px;
+                transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+
+                &:first-child {
+                    transform-origin: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    transform-origin: 30px;
+                }
+
+                &:nth-child(2) {
+                    right: 0;
+                    width: 30px;
                 }
             }
         }
 
-        .menu {
-            display: none;
+        #menu-button-checkbox:checked + label div {
+            &:first-child {
+                top: -3px;
+                transform: rotateZ(45deg);
+            }
+
+            &:last-child {
+                top: 3px;
+                transform: rotateZ(45deg);
+            }
+
+            &:nth-child(2) {
+                width: 42px;
+                top: 0;
+                right: 7px;
+                transform: rotateZ(-45deg);
+            }
         }
     }
 
-    .right-menu {
+    .menu {
+        display: none;
+        padding: 20px 30px;
+        gap: 24px;
+        z-index: 100;
+        border-radius: 18px;
+
+        .menu-item {
+            @include font-menu;
+            text-decoration: none;
+        }
+
+        .left-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .right-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            a i {
+                font-size: 20px;
+            }
+        }
+    }
+
+    #menu-button:has(#menu-button-checkbox:checked) + .menu {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .menu-icon {
-            color: $secondary-color-1;
-            font-size: 24px;
-        }
-
-        .menu {
-            display: none;
-        }
+        flex-direction: column;
+        position: absolute;
+        right: 16px;
+        top: 70px;
+        background-color: $secondary-color-3;
     }
 }
 
