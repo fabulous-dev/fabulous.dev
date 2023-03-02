@@ -12,23 +12,18 @@ $bold: 700;
 
 // Text styles
 @mixin font-header1 {
-    font: $semibold 50px /1.4 $poppins;
+    @media (max-width: 699px) { font: $semibold 28px /1.6 $poppins; }
+    @media (min-width: 700px) { font: $semibold 50px /1.4 $poppins; }
 }
 
 @mixin font-header2 {
-    font: $semibold 40px /1.44 $poppins;
+    @media (max-width: 699px) { font: $semibold 20px /1.4 $poppins; }
+    @media (min-width: 700px) { font: $semibold 32px /1.4 $poppins; }
 }
 
 @mixin font-header3 {
-    font: $semibold 32px /1.4 $poppins;
-}
-
-@mixin font-header4 {
-    font: $semibold 28px /1.6 $poppins;
-}
-
-@mixin font-header5 {
-    font: $semibold 20px /1.4 $poppins;
+    @media (max-width: 699px) { font: $semibold 28px /1.6 $poppins; }
+    @media (min-width: 700px) { font: $semibold 40px /1.44 $poppins; }
 }
 
 @mixin font-paragraph {

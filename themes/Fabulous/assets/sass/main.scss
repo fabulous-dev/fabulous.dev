@@ -20,15 +20,15 @@ body {
 }
 
 h1 {
-    @include font-header4;
+    @include font-header1;
 }
 
 h2 {
-    @include font-header5;
+    @include font-header2;
 }
 
 h3 {
-    @include font-header4;
+    @include font-header3;
 }
 
 a {
@@ -148,9 +148,6 @@ header {
                 margin-bottom: 5px;
                 border-radius: 4px;
                 transition: 0.3s ease all;
-
-                &:first-child {
-                }
 
                 &:last-child {
                     margin-bottom: 0;
@@ -488,7 +485,7 @@ main {
                 text-align: center;
 
                 i {
-                    @include font-header4;
+                    @include font-header3;
                     color: $secondary-color-1;
                 }
             }
