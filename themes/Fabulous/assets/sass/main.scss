@@ -127,7 +127,7 @@ header {
 
         label {
             display: block;
-            width: 30px;
+            width: 36px;
             height: 30px;
             cursor: pointer;
 
@@ -140,51 +140,35 @@ header {
                 left: 0;
             }
 
-            &:hover div {
-                background-color: $secondary-color-1;
-            }
-
             div {
+                background-color: $secondary-color-1;
                 position: relative;
                 top: 0;
-                height: 6px;
-                background-color: white;
-                margin-bottom: 6px;
+                height: 7px;
+                margin-bottom: 5px;
                 border-radius: 4px;
-                transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+                transition: 0.3s ease all;
 
                 &:first-child {
-                    transform-origin: 0;
                 }
 
                 &:last-child {
                     margin-bottom: 0;
-                    transform-origin: 30px;
-                }
-
-                &:nth-child(2) {
-                    right: 0;
-                    width: 30px;
                 }
             }
         }
 
         #menu-button-checkbox:checked + label div {
             &:first-child {
-                top: -3px;
-                transform: rotateZ(45deg);
-            }
-
-            &:last-child {
-                top: 3px;
-                transform: rotateZ(45deg);
+                transform: translateY(12px) rotate(-45deg);
             }
 
             &:nth-child(2) {
-                width: 42px;
-                top: 0;
-                right: 7px;
-                transform: rotateZ(-45deg);
+                transform: scaleX(0);
+            }
+
+            &:last-child {
+                transform: translateY(-12px) rotate(45deg);
             }
         }
     }
