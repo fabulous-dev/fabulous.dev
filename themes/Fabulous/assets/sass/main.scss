@@ -3,10 +3,15 @@
 @mixin padding-page {
     padding-left: 16px;
     padding-right: 16px;
+
+    @media (min-width: 700px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 * {
-    @include font-caption;
+    @include font-paragraph;
     padding: 0px;
     margin: 0px;
 }
@@ -14,7 +19,7 @@
 body {
     position: relative;
     background-color: $primary-color;
-    color: $full-white;
+    color: $white;
     background-repeat: no-repeat;
     -webkit-tap-highlight-color: transparent;
 }
@@ -32,7 +37,7 @@ h3 {
 }
 
 a {
-    color: $full-white;
+    color: $white;
     font-weight: $semibold;
 
     &:hover {
@@ -437,6 +442,7 @@ main {
 
                 h2 {
                     text-align: center;
+                    @include font-callout-header;
                 }
 
                 ul {
@@ -483,9 +489,10 @@ main {
 
             h3 {
                 text-align: center;
+                @include font-getstarted-header;
 
                 i {
-                    @include font-header3;
+                    @include font-getstarted-header;
                     color: $secondary-color-1;
                 }
             }
@@ -516,6 +523,96 @@ footer {
             list-style: none;
 
             font-size: 1.5em;
+        }
+    }
+}
+
+/* Tablet mode (700px to 999px) */
+@media only screen and (min-width: 700px) {
+    main {
+        .hero {
+            .hero-container {
+                .hero-image {
+                    width: 380px;
+                    height: 300px;
+
+                    #hero-1 {
+                        width: 370px;
+                        height: 257px;
+                    }
+
+                    #hero-2 {
+                        width: 84px;
+                        height: 177px;
+                        right: 93px;
+                    }
+
+                    #hero-3 {
+                        width: 84px;
+                        height: 177px;
+                    }
+                }
+            }
+        }
+
+        .body {
+            .content {
+                &#declarative-ui .content-image {
+                    width: 320px;
+                    height: 325px;
+                }
+
+                &#mvu .content-image {
+                    width: 416px;
+                    height: 168px;
+                }
+
+                &#functional-programming .content-image {
+                    width: 280px;
+                    height: 276px;
+                }
+
+                &#dotnet .content-image {
+                    width: 280px;
+                    height: 260px;
+                }
+            }
+
+            .callout div ul {
+                justify-content: space-around;
+            }
+        }
+
+        .get-started {
+            padding-left: 90px;
+            padding-right: 90px;
+
+            div {
+                gap: 63px;
+
+                .actions {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 74px;
+                }
+            }
+        }
+    }
+
+    .spotlights {
+        #spotlight-top {
+            top: -138px;
+            right: -174px;
+            width: 250px;
+            height: 375px;
+            filter: blur(90px);
+        }
+
+        #spotlight-bottom {
+            bottom: -569px;
+            width: 700px;
+            height: 700px;
+            filter: blur(84px);
         }
     }
 }

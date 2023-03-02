@@ -12,26 +12,33 @@ $bold: 700;
 
 // Text styles
 @mixin font-header1 {
-    @media (max-width: 699px) { font: $semibold 28px /1.6 $poppins; }
-    @media (min-width: 700px) { font: $semibold 50px /1.4 $poppins; }
+    font: $semibold 28px /1.6 $poppins;
+    @media (min-width: 700px) { font: $semibold 40px /1.44 $poppins; }
+    @media (min-width: 1000px) { font: $semibold 50px /1.4 $poppins; }
 }
 
 @mixin font-header2 {
-    @media (max-width: 699px) { font: $semibold 20px /1.4 $poppins; }
-    @media (min-width: 700px) { font: $semibold 32px /1.4 $poppins; }
+    font: $semibold 20px /1.4 $poppins;
+    //@media (min-width: 700px) { font: $semibold 28px /1.4 $poppins; }
 }
 
 @mixin font-header3 {
-    @media (max-width: 699px) { font: $semibold 28px /1.6 $poppins; }
-    @media (min-width: 700px) { font: $semibold 40px /1.44 $poppins; }
+    font: $semibold 28px /1.6 $poppins;
+}
+
+@mixin font-callout-header {
+    font: $semibold 20px /1.4 $poppins;
+    @media (min-width: 700px) { font: $semibold 28px /1.4 $poppins; }
+}
+
+@mixin font-getstarted-header {
+    font: $semibold 28px /1.6 $poppins;
+    @media (min-width: 700px) { font: $semibold 32px /1.44 $poppins; }
 }
 
 @mixin font-paragraph {
-    font: $regular 18px /1.4 $poppins;
-}
-
-@mixin font-caption {
     font: $medium 15px /1.5 $poppins;
+    @media (min-width: 700px) { font: $medium 18px /1.4 $poppins; }
 }
 
 @mixin font-button {
@@ -39,8 +46,9 @@ $bold: 700;
 }
 
 @mixin font-fabulous {
-    @media (max-width: 699px) { font: $semibold 23px /1.4 $jost; }
-    @media (min-width: 700px) { font: $semibold 34px /1.4 $jost; }
+    font: $semibold 23px /1.4 $jost;
+    @media (min-width: 700px) { font: $semibold 25px /1.4 $jost; }
+    @media (min-width: 1000px) { font: $semibold 34px /1.4 $jost; }
 }
 
 @mixin font-menu {
