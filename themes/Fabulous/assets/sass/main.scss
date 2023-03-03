@@ -460,7 +460,7 @@ main {
                             gap: 8px;
 
                             p {
-                                font: $medium 10px /1.4 $poppins;
+                                @include font-getstarted-optionlabel;
                             }
                         
                             img {
@@ -529,9 +529,26 @@ footer {
 
 /* Tablet mode (700px to 999px) */
 @media only screen and (min-width: 700px) {
+    header {
+        padding-top: 48px;
+
+        #menu-button:has(#menu-button-checkbox:checked) + .menu {
+            top: 98px;
+            right: 30px;
+        }
+    }
+
     main {
         .hero {
             .hero-container {
+                .hero-description {
+                    gap: 32px;
+
+                    .button {
+                        margin-top: 4px;
+                    }
+                }
+
                 .hero-image {
                     width: 380px;
                     height: 300px;
@@ -556,36 +573,61 @@ footer {
         }
 
         .body {
+            margin-top: 128px;
+            margin-bottom: 128px;
+            gap: 96px;
+
             .content {
-                &#declarative-ui .content-image {
-                    width: 320px;
-                    height: 325px;
-                }
+                .content-container {
+                    .content-description {
+                        gap: 24px;
 
-                &#mvu .content-image {
-                    width: 416px;
-                    height: 168px;
-                }
+                        hgroup {
+                            gap: 12px;
+                        }
+                    }
 
-                &#functional-programming .content-image {
-                    width: 280px;
-                    height: 276px;
-                }
+                    &#declarative-ui .content-image {
+                        width: 320px;
+                        height: 325px;
+                    }
 
-                &#dotnet .content-image {
-                    width: 280px;
-                    height: 260px;
+                    &#mvu .content-image {
+                        width: 416px;
+                        height: 168px;
+                    }
+
+                    &#functional-programming .content-image {
+                        width: 280px;
+                        height: 276px;
+                    }
+
+                    &#dotnet .content-image {
+                        width: 280px;
+                        height: 260px;
+                    }
                 }
             }
 
-            .callout div ul {
-                justify-content: space-around;
+            .community .community-container {
+                gap: 96px;
+            }
+
+            .callout div {
+                padding: 40px;
+                gap: 18px;
+
+                ul {
+                    padding-top: 18px;
+                    justify-content: space-around;
+                }
             }
         }
 
         .get-started {
             padding-left: 90px;
             padding-right: 90px;
+            margin-bottom: 128px;
 
             div {
                 gap: 63px;
