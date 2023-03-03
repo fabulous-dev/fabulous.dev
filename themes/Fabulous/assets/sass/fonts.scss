@@ -14,26 +14,33 @@ $bold: 700;
 @mixin font-header1 {
     font: $semibold 28px /1.6 $poppins;
     @media (min-width: 700px) { font: $semibold 40px /1.44 $poppins; }
-    @media (min-width: 1000px) { font: $semibold 50px /1.4 $poppins; }
 }
 
 @mixin font-header2 {
     font: $semibold 20px /1.4 $poppins;
-    //@media (min-width: 700px) { font: $semibold 28px /1.4 $poppins; }
+    @media (min-width: 1000px) { font: $semibold 28px /1.44 $poppins; }
 }
 
 @mixin font-header3 {
     font: $semibold 28px /1.6 $poppins;
+    @media (min-width: 1000px) { font: $semibold 40px /1.6 $poppins; }
+}
+
+@mixin font-community-header {
+    font: $semibold 28px /1.6 $poppins;
+    @media (min-width: 1000px) { font: $semibold 32px /1.5 $poppins }
 }
 
 @mixin font-callout-header {
     font: $semibold 20px /1.4 $poppins;
     @media (min-width: 700px) { font: $semibold 28px /1.4 $poppins; }
+    @media (min-width: 1000px) { font: $semibold 32px /1.5 $poppins }
 }
 
 @mixin font-getstarted-header {
     font: $semibold 28px /1.6 $poppins;
     @media (min-width: 700px) { font: $semibold 32px /1.44 $poppins; }
+    @media (min-width: 1000px) { font: $semibold 40px /1.44 $poppins; }
 }
 
 @mixin font-getstarted-optionlabel {
@@ -53,6 +60,7 @@ $bold: 700;
 @mixin font-fabulous {
     font: $semibold 24px /1.4 $jost;
     @media (min-width: 700px) { font: $semibold 25px /1.4 $jost; }
+    @media (min-width: 1000px) { font: $semibold 34px /1.4 $jost; }
 }
 
 @mixin font-menu {
