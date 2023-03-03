@@ -11,8 +11,10 @@
 {{ $hero2 := resources.Get "images/hero-2.webp" }}
 {{ $hero3 := resources.Get "images/hero-3.webp" }}
 {{ $expressiveViews := resources.Get "videos/expressive-views.webm" }}
+{{ $expressiveViewsFallback := resources.Get "images/expressive-views.webp" }}
 {{ $mvu := resources.Get "images/mvu.webp" }}
 {{ $fsharp := resources.Get "videos/fsharp.webm" }}
+{{ $fsharpFallback := resources.Get "images/fsharp.webp" }}
 {{ $dotnetEcosystem := resources.Get "images/dotnet-ecosystem.webp" }}
 {{ $xamarinLogo := resources.Get "images/xamarin.svg" }}
 {{ $mauiLogo := resources.Get "images/maui.svg" }}
@@ -45,6 +47,7 @@
                 </div>
                 <video class="content-image" autoplay muted loop>
                     <source src="{{ $expressiveViews.RelPermalink }}" alt="Profile card with the corresponding Fabulous code" />
+                    <img src="{{ $expressiveViewsFallback.RelPermalink }}" alt="Profile card with the corresponding Fabulous code" />
                 </video>
             </div>
         </section>
@@ -76,6 +79,7 @@
                 </div>
                 <video class="content-image" autoplay muted loop>
                     <source src="{{ $fsharp.RelPermalink }}" alt="fsharp" />
+                    <img src="{{ $fsharpFallback.RelPermalink }}" alt="fsharp" />
                 </video>
             </div>
         </section>
