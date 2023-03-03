@@ -1,9 +1,12 @@
 {{ $sass := resources.Get "sass/main.scss" }}
 {{ $style := $sass | resources.ToCSS }}
 
+{{ $logo := resources.Get "images/logo.svg" }}
+{{ $logoTitle := resources.Get "images/logo-title.svg" }}
+
 <meta charset="utf-8"/>
-<link rel="icon" href="https://raw.githubusercontent.com/fabulous-dev/Fabulous/main/logo/nuget-icon.png" />
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/fabulous-dev/Fabulous/main/logo/nuget-icon.png" />
+<link rel="icon" href="{{ $logo.RelPermalink }}" />
+<link rel="apple-touch-icon" href="{{ $logo.RelPermalink }}" />
 <title>{{ .Site.Title }}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="description" content="{{ .Site.Params.Description }}" />
@@ -12,7 +15,7 @@
 <meta property="og:title" content="{{ .Site.Title }}" />
 <meta property="og:url" content="{{ .Site.BaseURL }}" />
 <meta property="og:description" content="{{ .Site.Params.Description }}" />
-<meta property="og:image" content="https://raw.githubusercontent.com/fabulous-dev/Fabulous/main/logo/logo-title.png" />
+<meta property="og:image" content="{{ $logoTitle.RelPermalink }}" />
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
