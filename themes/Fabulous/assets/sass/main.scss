@@ -258,46 +258,51 @@ main {
                 width: 320px;
                 height: 255px;
                 align-self: center;
-                overflow: hidden;
+
+                @keyframes slideInFromTopBig {
+                    100% {
+                        top: 5%;
+                    }
+                }
 
                 @keyframes slideInFromTop {
                     100% {
-                        bottom: 0px;
+                        bottom: 0%;
                     }
                 }
 
                 img {
                     object-fit: contain;
+                    width: 100%;
+                    height: 100%;
                 }
 
                 #hero-1 {
                     position: absolute;
-                    width: 311px;
-                    height: 220px;
-                    top: 0px;
-                    bottom: 40px;
-                    margin-top: auto;
-                    margin-bottom: auto;
+                    width: 96%;
+                    height: 86%;
+                    top: -5%;
+                    left: 0;
 
-                    animation: 1s ease-out 0s 1 slideInFromTop forwards;
+                    animation: 1s ease-out 0s 1 slideInFromTopBig forwards;
                 }
 
                 #hero-2 {
                     position: absolute;
-                    width: 72px;
-                    height: 152px;
-                    right: 76px;
-                    bottom: 75px;
+                    width: 20%;
+                    height: 54%;
+                    right: 21%;
+                    bottom: 16%;
 
                     animation: 1s ease-out 0s 1 slideInFromTop forwards;
                 }
 
                 #hero-3 {
                     position: absolute;
-                    width: 72px;
-                    height: 152px;
-                    right: 0px;
-                    bottom: 50px;
+                    width: 20%;
+                    height: 54%;
+                    right: 0;
+                    bottom: 12%;
                     animation: 1s ease-out 0s 1 slideInFromTop forwards;
                 }
             }
@@ -526,7 +531,7 @@ main {
                     display: flex;
                     flex-direction: row;
                     list-style: none;
-                    justify-content: space-between;
+                    justify-content: space-around;
 
                     li {
                         a {
@@ -635,22 +640,6 @@ footer {
                 .hero-image {
                     width: 380px;
                     height: 300px;
-
-                    #hero-1 {
-                        width: 370px;
-                        height: 257px;
-                    }
-
-                    #hero-2 {
-                        width: 84px;
-                        height: 177px;
-                        right: 93px;
-                    }
-
-                    #hero-3 {
-                        width: 84px;
-                        height: 177px;
-                    }
                 }
             }
         }
@@ -702,7 +691,6 @@ footer {
 
                 ul {
                     padding-top: 18px;
-                    justify-content: space-around;
                 }
             }
         }
@@ -961,5 +949,12 @@ footer {
             height: 1000px;
             filter: blur(170px);
         }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    main .hero .hero-container .hero-image {
+        width: 490px;
+        height: 386px;
     }
 }

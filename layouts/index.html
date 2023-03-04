@@ -7,9 +7,19 @@
 
 {{ define "main" }}
 
-{{ $hero1 := resources.Get "images/hero-1.webp" }}
-{{ $hero2 := resources.Get "images/hero-2.webp" }}
-{{ $hero3 := resources.Get "images/hero-3.webp" }}
+{{ $hero_360_1 := resources.Get "images/hero-360px-1.png" }}
+{{ $hero_360_2 := resources.Get "images/hero-360px-2.png" }}
+{{ $hero_360_3 := resources.Get "images/hero-360px-3.png" }}
+{{ $hero_700_1 := resources.Get "images/hero-700px-1.png" }}
+{{ $hero_700_2 := resources.Get "images/hero-700px-2.png" }}
+{{ $hero_700_3 := resources.Get "images/hero-700px-3.png" }}
+{{ $hero_1000_1 := resources.Get "images/hero-1000px-1.png" }}
+{{ $hero_1000_2 := resources.Get "images/hero-1000px-2.png" }}
+{{ $hero_1000_3 := resources.Get "images/hero-1000px-3.png" }}
+{{ $hero_1440_1 := resources.Get "images/hero-1440px-1.png" }}
+{{ $hero_1440_2 := resources.Get "images/hero-1440px-2.png" }}
+{{ $hero_1440_3 := resources.Get "images/hero-1440px-3.png" }}
+
 {{ $expressiveViews1 := resources.Get "images/expressive-views-1.webp" }}
 {{ $expressiveViews2 := resources.Get "images/expressive-views-2.webp" }}
 {{ $mvu := resources.Get "images/mvu.webp" }}
@@ -28,9 +38,24 @@
                 <a class="button" href="https://docs.fabulous.dev/v2/getting-started/">Get started</a>
             </div>
             <div class="hero-image">
-                <img id="hero-1" src="{{ $hero1.RelPermalink }}" alt="Desktop app example made with Fabulous" />
-                <img id="hero-2" src="{{ $hero2.RelPermalink }}" alt="Mobile app example made with Fabulous" />
-                <img id="hero-3" src="{{ $hero3.RelPermalink }}" alt="Mobile app example made with Fabulous" />
+                <picture id="hero-1">
+                    <source srcset="{{ $hero_1440_1.RelPermalink }}" media="(min-width: 1440px)" />
+                    <source srcset="{{ $hero_1000_1.RelPermalink }}" media="(min-width: 1000px)" />
+                    <source srcset="{{ $hero_700_1.RelPermalink }}" media="(min-width: 700px)" />
+                    <img src="{{ $hero_360_1.RelPermalink }}" alt="Desktop app example made with Fabulous" />
+                </picture>
+                <picture id="hero-2">
+                    <source srcset="{{ $hero_1440_2.RelPermalink }}" media="(min-width: 1440px)" />
+                    <source srcset="{{ $hero_1000_2.RelPermalink }}" media="(min-width: 1000px)" />
+                    <source srcset="{{ $hero_700_2.RelPermalink }}" media="(min-width: 700px)" />
+                    <img src="{{ $hero_360_2.RelPermalink }}" alt="Mobile app example made with Fabulous" />
+                </picture>
+                <picture id="hero-3">
+                    <source srcset="{{ $hero_1440_3.RelPermalink }}" media="(min-width: 1440px)" />
+                    <source srcset="{{ $hero_1000_3.RelPermalink }}" media="(min-width: 1000px)" />
+                    <source srcset="{{ $hero_700_3.RelPermalink }}" media="(min-width: 700px)" />
+                    <img src="{{ $hero_360_3.RelPermalink }}" alt="Mobile app example made with Fabulous" />
+                </picture>
             </div>
         </div>
         <div class="spotlight"></div>
