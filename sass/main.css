@@ -228,7 +228,7 @@ main {
           position: absolute;
           width: 20%;
           height: 54%;
-          right: 21%;
+          right: 22%;
           bottom: 16%;
           animation: 1s ease-out 0s 1 slideInFromTop forwards; }
         main .hero .hero-container .hero-image #hero-3 {
@@ -487,8 +487,6 @@ footer {
     footer {
       padding-left: 88px;
       padding-right: 88px; } }
-  footer .design-by {
-    max-width: 25%; }
   footer .footer-social ul {
     display: flex;
     flex-direction: row;
