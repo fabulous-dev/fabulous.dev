@@ -158,7 +158,8 @@ header {
     header .menu .right-menu {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly; }
+      justify-content: space-around;
+      gap: 20px; }
       header .menu .right-menu a i {
         font-size: 20px; }
   header #menu-button:has(#menu-button-checkbox:checked) + .menu {
