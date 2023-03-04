@@ -7,7 +7,8 @@ $primary-color: #1F1F2D;
 $secondary-color-1: #8AB7FF;
 $secondary-color-2: #CED8EA;
 $secondary-color-3: #2D2D41;
-$shadow-color: #81A4CD4D;
+$shadow-color: rgba($color: #81A4CD, $alpha: 0.3);
+$menu-backdrop-color: rgba($color: #414141, $alpha: 0.5);
 
 $spotlight-top-color: rgba($color: #9185E6, $alpha: 0.8);
 $spotlight-header-color: rgba($color: #85DBE6, $alpha: 0.8);

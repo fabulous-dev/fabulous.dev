@@ -143,15 +143,6 @@ header {
             height: 30px;
             cursor: pointer;
 
-            &::before {
-                content: "";
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-
             div {
                 background-color: $secondary-color-1;
                 position: relative;
@@ -167,17 +158,30 @@ header {
             }
         }
 
-        #menu-button-checkbox:checked + label div {
-            &:first-child {
-                transform: translateY(12px) rotate(-45deg);
+        #menu-button-checkbox:checked + label {
+            &::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 99;
+                background-color: $menu-backdrop-color;
             }
 
-            &:nth-child(2) {
-                transform: scaleX(0);
-            }
+            div {
+                &:first-child {
+                    transform: translateY(12px) rotate(-45deg);
+                }
 
-            &:last-child {
-                transform: translateY(-12px) rotate(45deg);
+                &:nth-child(2) {
+                    transform: scaleX(0);
+                }
+
+                &:last-child {
+                    transform: translateY(-12px) rotate(45deg);
+                }
             }
         }
     }
