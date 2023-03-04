@@ -291,7 +291,7 @@ main {
                     position: absolute;
                     width: 20%;
                     height: 54%;
-                    right: 21%;
+                    right: 22%;
                     bottom: 16%;
 
                     animation: 1s ease-out 0s 1 slideInFromTop forwards;
@@ -596,10 +596,6 @@ footer {
     align-items: center;
     @include padding-page;
     padding-bottom: 30px;
-
-    .design-by {
-        max-width: 25%;
-    }
 
     .footer-social {
         ul {
