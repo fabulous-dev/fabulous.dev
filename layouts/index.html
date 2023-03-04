@@ -10,7 +10,8 @@
 {{ $hero1 := resources.Get "images/hero-1.webp" }}
 {{ $hero2 := resources.Get "images/hero-2.webp" }}
 {{ $hero3 := resources.Get "images/hero-3.webp" }}
-{{ $expressiveViews := resources.Get "videos/expressive-views.webm" }}
+{{ $expressiveViews1 := resources.Get "images/expressive-views-1.webp" }}
+{{ $expressiveViews2 := resources.Get "images/expressive-views-2.webp" }}
 {{ $mvu := resources.Get "images/mvu.webp" }}
 {{ $fsharp1 := resources.Get "images/fsharp-1.webp" }}
 {{ $fsharp2 := resources.Get "images/fsharp-2.webp" }}
@@ -44,9 +45,10 @@
                     </hgroup>
                     <p>Describe how your app should look rather than the steps required to create it.<br/>Fabulous will make sure your users always see the latest state of your app.</p>
                 </div>
-                <video class="content-image" autoplay muted loop>
-                    <source src="{{ $expressiveViews.RelPermalink }}" alt="Profile card with the corresponding Fabulous code" />
-                </video>
+                <div id="declarative-ui-animated" class="content-image">
+                    <img id="expressive-views-1" src="{{ $expressiveViews1.RelPermalink }}" />
+                    <img id="expressive-views-2" src="{{ $expressiveViews2.RelPermalink }}" />
+                </div>
             </div>
         </section>
         <section id="mvu" class="content">
