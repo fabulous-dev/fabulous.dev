@@ -484,6 +484,8 @@ footer {
     footer {
       padding-left: 88px;
       padding-right: 88px; } }
+  footer .design-by {
+    max-width: 25%; }
   footer .footer-social ul {
     display: flex;
     flex-direction: row;
@@ -564,7 +566,9 @@ footer {
     bottom: -569px;
     width: 700px;
     height: 700px;
-    filter: blur(84px); } }
+    filter: blur(84px); }
+  footer .design-by {
+    max-width: unset; } }
 
 /* Desktop mode (1000px and more) */
 @media only screen and (min-width: 1000px) {
