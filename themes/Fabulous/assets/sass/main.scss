@@ -592,6 +592,10 @@ footer {
     @include padding-page;
     padding-bottom: 30px;
 
+    .design-by {
+        max-width: 25%;
+    }
+
     .footer-social {
         ul {
             display: flex;
@@ -735,6 +739,10 @@ footer {
             height: 700px;
             filter: blur(84px);
         }
+    }
+
+    footer .design-by {
+        max-width: unset;
     }
 }
 
