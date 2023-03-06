@@ -1,8 +1,7 @@
-{{ define "background" }}
-    <div class="spotlights">
-        <div class="spotlight" id="spotlight-top"></div>
-        <div class="spotlight" id="spotlight-bottom"></div>
-    </div>
+{{ define "additional-styles" }}
+{{ $sass := resources.Get "sass/root.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ end }}
 
 {{ define "main" }}
