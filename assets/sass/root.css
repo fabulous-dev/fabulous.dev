@@ -1,0 +1,718 @@
+/* Design system: colors */
+/* Design system: colors */
+* {
+  font: 500 15px/1.5 "Poppins", sans-serif;
+  padding: 0px;
+  margin: 0px; }
+  @media (min-width: 700px) {
+    * {
+      font: 500 18px / 1.4 "Poppins", sans-serif; } }
+body {
+  position: relative;
+  background-color: #1F1F2D;
+  color: rgba(255, 255, 255, 0.9);
+  background-repeat: no-repeat;
+  -webkit-tap-highlight-color: transparent; }
+
+h1 {
+  font: 600 28px/1.6 "Poppins", sans-serif; }
+  @media (min-width: 700px) {
+    h1 {
+      font: 600 40px / 1.44 "Poppins", sans-serif; } }
+h2 {
+  font: 600 20px/1.4 "Poppins", sans-serif; }
+  @media (min-width: 1000px) {
+    h2 {
+      font: 600 28px / 1.44 "Poppins", sans-serif; } }
+h3 {
+  font: 600 28px/1.6 "Poppins", sans-serif; }
+  @media (min-width: 1000px) {
+    h3 {
+      font: 600 40px / 1.6 "Poppins", sans-serif; } }
+a {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600; }
+  a:hover {
+    color: #8AB7FF; }
+  a.button {
+    display: flex;
+    width: 160px;
+    height: 50px;
+    background: #8AB7FF;
+    color: #1F1F2D;
+    justify-content: center;
+    align-items: center;
+    font: 700 16px/1.4 "Poppins", sans-serif;
+    text-decoration: none;
+    border-radius: 8px; }
+    a.button.outlined {
+      background-color: transparent;
+      border: 1px solid #8AB7FF;
+      color: #8AB7FF; }
+    a.button:hover {
+      filter: drop-shadow(2px 2px 10px rgba(129, 164, 205, 0.3)); }
+
+.spotlight {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate3d(0, 0, 0); }
+
+.spotlights {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; }
+  .spotlights #spotlight-top {
+    top: -85px;
+    right: -156px;
+    width: 200px;
+    height: 300px;
+    filter: blur(72px);
+    background-color: rgba(145, 133, 230, 0.8); }
+  .spotlights #spotlight-bottom {
+    bottom: -240px;
+    width: 360px;
+    height: 360px;
+    filter: blur(65px);
+    background-color: rgba(138, 183, 255, 0.8); }
+
+header {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; }
+  @media (min-width: 700px) {
+    header {
+      padding-left: 30px;
+      padding-right: 30px; } }
+  @media (min-width: 1000px) {
+    header {
+      padding-left: 88px;
+      padding-right: 88px; } }
+  header .logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font: 600 24px/1.4 "Jost", sans-serif;
+    text-decoration: none; }
+    @media (min-width: 700px) {
+      header .logo a {
+        font: 600 25px / 1.4 "Jost", sans-serif; } }
+    @media (min-width: 1000px) {
+      header .logo a {
+        font: 600 34px / 1.4 "Jost", sans-serif; } }
+    header .logo a img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain; }
+  header #menu-button #menu-button-checkbox {
+    display: none; }
+  header #menu-button label {
+    display: block;
+    width: 36px;
+    height: 30px;
+    cursor: pointer; }
+    header #menu-button label div {
+      background-color: #8AB7FF;
+      position: relative;
+      top: 0;
+      height: 7px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      transition: 0.3s ease all; }
+      header #menu-button label div:last-child {
+        margin-bottom: 0; }
+  header #menu-button #menu-button-checkbox:checked + label::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99; }
+  header #menu-button #menu-button-checkbox:checked + label div:first-child {
+    transform: translateY(12px) rotate(-45deg); }
+  header #menu-button #menu-button-checkbox:checked + label div:nth-child(2) {
+    transform: scaleX(0); }
+  header #menu-button #menu-button-checkbox:checked + label div:last-child {
+    transform: translateY(-12px) rotate(45deg); }
+  header .menu {
+    display: none;
+    padding: 20px 30px;
+    gap: 24px;
+    z-index: 100;
+    border-radius: 18px; }
+    header .menu .menu-item {
+      font: 600 18px/1.4 "Poppins", sans-serif;
+      text-decoration: none; }
+    header .menu .left-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 24px; }
+    header .menu .right-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 20px; }
+      header .menu .right-menu a i {
+        font-size: 20px; }
+  header #menu-button:has(#menu-button-checkbox:checked) + .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 16px;
+    top: 70px;
+    background-color: #2D2D41; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 30px; }
+  @media (min-width: 700px) {
+    footer {
+      padding-left: 30px;
+      padding-right: 30px; } }
+  @media (min-width: 1000px) {
+    footer {
+      padding-left: 88px;
+      padding-right: 88px; } }
+  footer .footer-social ul {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    list-style: none; }
+    footer .footer-social ul i {
+      font-size: 20px; }
+
+/* Tablet mode (700px to 999px) */
+@media only screen and (min-width: 700px) {
+  header {
+    padding-top: 48px; }
+    header #menu-button:has(#menu-button-checkbox:checked) + .menu {
+      top: 98px;
+      right: 30px; }
+  .spotlights #spotlight-top {
+    top: -138px;
+    right: -174px;
+    width: 250px;
+    height: 375px;
+    filter: blur(90px); }
+  .spotlights #spotlight-bottom {
+    bottom: -569px;
+    width: 700px;
+    height: 700px;
+    filter: blur(84px); }
+  footer .design-by {
+    max-width: unset; } }
+
+/* Desktop mode (1000px and more) */
+@media only screen and (min-width: 1000px) {
+  header {
+    height: 55px;
+    padding-top: 54px;
+    justify-content: start;
+    gap: 72px; }
+    header .logo a img {
+      width: 56px;
+      height: 56px; }
+    header #menu-button {
+      display: none; }
+    header .menu {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      padding: 0px;
+      align-items: center; }
+      header .menu .left-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 66px; }
+      header .menu .right-menu {
+        gap: 35px; }
+        header .menu .right-menu a i {
+          font-size: 26px; }
+  footer .footer-social ul {
+    gap: 35px; }
+    footer .footer-social ul i {
+      font-size: 26px; }
+  .spotlights #spotlight-top {
+    top: -138px;
+    right: -224px;
+    width: 312px;
+    height: 468px;
+    filter: blur(112px); }
+  .spotlights #spotlight-bottom {
+    bottom: -835px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1300px;
+    height: 1000px;
+    filter: blur(170px); } }
+
+/* Design system: colors */
+/* Design system: colors */
+main {
+  display: flex;
+  flex-direction: column; }
+  main .hero {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 48px; }
+    @media (min-width: 700px) {
+      main .hero {
+        padding-left: 30px;
+        padding-right: 30px; } }
+    @media (min-width: 1000px) {
+      main .hero {
+        padding-left: 88px;
+        padding-right: 88px; } }
+    main .hero .hero-container {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 36px; }
+      main .hero .hero-container .hero-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center; }
+        main .hero .hero-container .hero-description .button {
+          margin-top: 20px; }
+      main .hero .hero-container .hero-image {
+        position: relative;
+        width: 320px;
+        height: 255px;
+        align-self: center; }
+
+@keyframes slideInFromTopBig {
+  100% {
+    top: 5%; } }
+
+@keyframes slideInFromTop {
+  100% {
+    bottom: 0%; } }
+        main .hero .hero-container .hero-image img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%; }
+        main .hero .hero-container .hero-image #hero-1 {
+          position: absolute;
+          width: 97%;
+          height: 86%;
+          top: -5%;
+          left: 0;
+          animation: 1s ease-out 0s 1 slideInFromTopBig forwards; }
+        main .hero .hero-container .hero-image #hero-2 {
+          position: absolute;
+          width: 20%;
+          height: 54%;
+          right: 22%;
+          bottom: 16%;
+          animation: 1s ease-out 0s 1 slideInFromTop forwards; }
+        main .hero .hero-container .hero-image #hero-3 {
+          position: absolute;
+          width: 20%;
+          height: 54%;
+          right: 0;
+          bottom: 12%;
+          animation: 1s ease-out 0s 1 slideInFromTop forwards; }
+    main .hero .spotlight {
+      background-color: rgba(133, 219, 230, 0.8);
+      width: 200px;
+      height: 300px;
+      filter: blur(90px);
+      left: -180px;
+      bottom: 0px; }
+  main .body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 108px;
+    padding-bottom: 108px;
+    gap: 88px;
+    overflow: hidden; }
+    main .body .spotlight {
+      width: 200px;
+      height: 300px;
+      filter: blur(90px); }
+    main .body .content {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-left: 16px;
+      padding-right: 16px; }
+      @media (min-width: 700px) {
+        main .body .content {
+          padding-left: 30px;
+          padding-right: 30px; } }
+      @media (min-width: 1000px) {
+        main .body .content {
+          padding-left: 88px;
+          padding-right: 88px; } }
+      main .body .content .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 36px; }
+        main .body .content .content-container .content-description {
+          display: flex;
+          flex-direction: column;
+          gap: 20px; }
+          main .body .content .content-container .content-description hgroup {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; }
+            main .body .content .content-container .content-description hgroup h2 {
+              color: #8AB7FF; }
+        main .body .content .content-container .content-image {
+          width: 264px;
+          height: 264px;
+          align-self: center; }
+          main .body .content .content-container .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; }
+      main .body .content#declarative-ui #declarative-ui-animated {
+        position: relative;
+        align-self: center; }
+        main .body .content#declarative-ui #declarative-ui-animated #expressive-views-1 {
+          position: absolute; }
+        main .body .content#declarative-ui #declarative-ui-animated #expressive-views-2 {
+          position: absolute;
+          height: 17%;
+          width: 43%;
+          right: 0%;
+          bottom: 38%;
+          animation: 4s ease 0s infinite moveRight forwards; }
+
+@keyframes moveRight {
+  33%, 66% {
+    right: -10%; }
+  100% {
+    right: 0%; } }
+      main .body .content#declarative-ui .content-image {
+        width: 261px;
+        height: 264px; }
+      main .body .content#mvu .spotlight {
+        background-color: rgba(138, 183, 255, 0.8);
+        right: -180px;
+        bottom: 0px; }
+      main .body .content#mvu .content-image {
+        width: 270px;
+        height: 108px; }
+      main .body .content#functional-programming .content-image {
+        width: 191px;
+        height: 188px; }
+      main .body .content#functional-programming #functional-programming-animated {
+        position: relative;
+        overflow: hidden;
+        align-self: center; }
+        main .body .content#functional-programming #functional-programming-animated #fsharp-1 {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: -5%; }
+        main .body .content#functional-programming #functional-programming-animated #fsharp-2 {
+          position: absolute;
+          width: 24%;
+          height: 24%;
+          background: linear-gradient(180deg, #85B2E6 0%, #9EC3EE 47.71%, #ACC7F8 100%);
+          border-radius: 9999px;
+          bottom: 33%;
+          left: 17%;
+          animation: 1.2s ease 0s infinite alternate zoomIn forwards; }
+
+@keyframes zoomIn {
+  50%, 100% {
+    width: 36%;
+    height: 36%;
+    bottom: 27%;
+    left: 10%; } }
+        main .body .content#functional-programming #functional-programming-animated #fsharp-3 {
+          position: absolute;
+          width: 45%;
+          height: 45%;
+          bottom: 0%;
+          left: 18%; }
+      main .body .content#dotnet .spotlight {
+        background-color: rgba(145, 133, 230, 0.8);
+        left: -180px;
+        bottom: 0px; }
+      main .body .content#dotnet .content-image {
+        width: 194px;
+        height: 177px; }
+    main .body .community {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      main .body .community .community-container {
+        display: flex;
+        flex-direction: column;
+        gap: 88px; }
+      main .body .community .spotlight {
+        background-color: rgba(133, 219, 230, 0.8);
+        right: -180px;
+        bottom: 0px; }
+    main .body .callout {
+      display: flex;
+      flex-direction: row;
+      padding-left: 16px;
+      padding-right: 16px;
+      justify-content: center; }
+      @media (min-width: 700px) {
+        main .body .callout {
+          padding-left: 30px;
+          padding-right: 30px; } }
+      @media (min-width: 1000px) {
+        main .body .callout {
+          padding-left: 88px;
+          padding-right: 88px; } }
+      main .body .callout div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 30px;
+        background-color: #2D2D41;
+        border-radius: 18px; }
+        main .body .callout div:hover {
+          filter: drop-shadow(4px 4px 30px rgba(129, 164, 205, 0.3)); }
+        main .body .callout div h2 {
+          text-align: center;
+          font: 600 20px/1.4 "Poppins", sans-serif; }
+          @media (min-width: 700px) {
+            main .body .callout div h2 {
+              font: 600 28px / 1.4 "Poppins", sans-serif; } }
+          @media (min-width: 1000px) {
+            main .body .callout div h2 {
+              font: 600 32px / 1.5 "Poppins", sans-serif; } }
+        main .body .callout div ul {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          justify-content: space-around; }
+          main .body .callout div ul li a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            align-items: center;
+            gap: 8px; }
+            main .body .callout div ul li a p {
+              font: 500 10px/1.4 "Poppins", sans-serif; }
+              @media (min-width: 700px) {
+                main .body .callout div ul li a p {
+                  font: 500 11px / 1.5 "Poppins", sans-serif; } }
+            main .body .callout div ul li a img {
+              height: 48px;
+              width: 48px;
+              object-fit: contain; }
+  main .get-started {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 108px; }
+    @media (min-width: 700px) {
+      main .get-started {
+        padding-left: 30px;
+        padding-right: 30px; } }
+    @media (min-width: 1000px) {
+      main .get-started {
+        padding-left: 88px;
+        padding-right: 88px; } }
+    main .get-started div {
+      display: flex;
+      flex-direction: column;
+      gap: 32px; }
+      main .get-started div h3 {
+        text-align: center;
+        font: 600 28px/1.6 "Poppins", sans-serif; }
+        @media (min-width: 700px) {
+          main .get-started div h3 {
+            font: 600 32px / 1.44 "Poppins", sans-serif; } }
+        @media (min-width: 1000px) {
+          main .get-started div h3 {
+            font: 600 40px / 1.44 "Poppins", sans-serif; } }
+        main .get-started div h3 i {
+          font: 600 28px/1.6 "Poppins", sans-serif;
+          color: #8AB7FF; }
+          @media (min-width: 700px) {
+            main .get-started div h3 i {
+              font: 600 32px / 1.44 "Poppins", sans-serif; } }
+          @media (min-width: 1000px) {
+            main .get-started div h3 i {
+              font: 600 40px / 1.44 "Poppins", sans-serif; } }
+      main .get-started div .actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px; }
+
+/* Tablet mode (700px to 999px) */
+@media only screen and (min-width: 700px) {
+  main .hero .hero-container .hero-description {
+    gap: 32px; }
+    main .hero .hero-container .hero-description .button {
+      margin-top: 4px; }
+  main .hero .hero-container .hero-image {
+    width: 380px;
+    height: 300px; }
+  main .body {
+    margin-top: 128px;
+    margin-bottom: 128px;
+    gap: 96px; }
+    main .body .content .content-container .content-description {
+      gap: 24px; }
+      main .body .content .content-container .content-description hgroup {
+        gap: 12px; }
+    main .body .content .content-container#declarative-ui .content-image {
+      width: 320px;
+      height: 325px; }
+    main .body .content .content-container#mvu .content-image {
+      width: 416px;
+      height: 168px; }
+    main .body .content .content-container#functional-programming .content-image {
+      width: 280px;
+      height: 276px; }
+    main .body .content .content-container#dotnet .content-image {
+      width: 280px;
+      height: 260px; }
+    main .body .community .community-container {
+      gap: 96px; }
+    main .body .callout div {
+      padding: 40px;
+      gap: 18px; }
+      main .body .callout div ul {
+        padding-top: 18px; }
+  main .get-started {
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-bottom: 128px; }
+    main .get-started div {
+      gap: 63px; }
+      main .get-started div .actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 74px; } }
+
+/* Desktop mode (1000px and more) */
+@media only screen and (min-width: 1000px) {
+  main .hero {
+    padding-top: 88px; }
+    main .hero .spotlight {
+      width: 312px;
+      height: 460px;
+      filter: blur(75px);
+      left: -224px;
+      bottom: -160px; }
+    main .hero .hero-container {
+      flex-direction: row;
+      gap: 48px;
+      max-width: 1280px; }
+      main .hero .hero-container .hero-description {
+        gap: 16px; }
+        main .hero .hero-container .hero-description .button {
+          margin-top: 32px; }
+      main .hero .hero-container .hero-image {
+        flex-shrink: 0;
+        width: 400px;
+        height: 288px; }
+  main .body {
+    padding-top: 146px;
+    padding-bottom: 146px;
+    gap: 136px; }
+    main .body .spotlight {
+      width: 312px;
+      height: 460px;
+      filter: blur(75px); }
+    main .body .content .content-container {
+      flex-direction: row-reverse;
+      gap: 72px;
+      width: 100%;
+      max-width: 1280px; }
+      main .body .content .content-container .content-description {
+        gap: 16px;
+        flex-grow: 1; }
+        main .body .content .content-container .content-description hgroup {
+          gap: 4px; }
+      main .body .content .content-container .content-image {
+        flex-grow: 1;
+        flex-shrink: 0; }
+    main .body .content:nth-child(even) .content-container {
+      flex-direction: row; }
+    main .body .content#declarative-ui .content-image {
+      width: 350px;
+      height: 345px; }
+    main .body .content#mvu .spotlight {
+      right: -224px; }
+    main .body .content#mvu .content-image {
+      width: 355px;
+      height: 143px; }
+    main .body .content#functional-programming .content-image {
+      width: 300px;
+      height: 300px; }
+    main .body .content#dotnet .spotlight {
+      left: -224px; }
+    main .body .content#dotnet .content-image {
+      width: 315px;
+      height: 300px; }
+    main .body .community .spotlight {
+      right: -224px; }
+    main .body .community .community-container {
+      max-width: 1280px;
+      flex-direction: row;
+      gap: 64px;
+      padding-left: 16px;
+      padding-right: 16px; } }
+    @media only screen and (min-width: 1000px) and (min-width: 700px) {
+      main .body .community .community-container {
+        padding-left: 30px;
+        padding-right: 30px; } }
+    @media only screen and (min-width: 1000px) and (min-width: 1000px) {
+      main .body .community .community-container {
+        padding-left: 88px;
+        padding-right: 88px; } }
+@media only screen and (min-width: 1000px) {
+      main .body .community .community-container hgroup h3 {
+        font: 600 28px / 1.6 "Poppins", sans-serif; } }
+      @media only screen and (min-width: 1000px) and (min-width: 1000px) {
+        main .body .community .community-container hgroup h3 {
+          font: 600 32px / 1.5 "Poppins", sans-serif; } }
+@media only screen and (min-width: 1000px) {
+      main .body .community .community-container .content {
+        padding: 0px; }
+    main .body .callout div {
+      max-width: 528px;
+      text-align: center;
+      padding: 60px 96px;
+      gap: 32px; }
+      main .body .callout div ul li a img {
+        width: 74px;
+        height: 74px; }
+  main .get-started {
+    margin-bottom: 220px; }
+    main .get-started div {
+      max-width: 682px; } }
+
+@media only screen and (min-width: 1400px) {
+  main .hero .hero-container .hero-image {
+    width: 490px;
+    height: 386px; } }
