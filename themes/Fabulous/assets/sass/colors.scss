@@ -11,10 +11,6 @@ $shadow-color: rgba($color: #81A4CD, $alpha: 0.3);
 $menu-backdrop-color: rgba($color: #414141, $alpha: 0.5);
 
 $spotlight-top-color: rgba($color: #9185E6, $alpha: 0.8);
-$spotlight-header-color: rgba($color: #85DBE6, $alpha: 0.8);
-$spotlight-mvu-color: rgba($color: #8AB7FF, $alpha: 0.8);
-$spotlight-dotnet-color: rgba($color: #9185E6, $alpha: 0.8);
-$spotlight-community-color: rgba($color: #85DBE6, $alpha: 0.8);
 $spotlight-bottom-color: rgba($color: #8AB7FF, $alpha: 0.8);
 
 @mixin shadow {
