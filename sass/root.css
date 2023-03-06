@@ -12,18 +12,27 @@ body {
   background-color: #1F1F2D;
   color: rgba(255, 255, 255, 0.9);
   background-repeat: no-repeat;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 h1 {
   font: 600 28px/1.6 "Poppins", sans-serif; }
   @media (min-width: 700px) {
     h1 {
       font: 600 40px / 1.44 "Poppins", sans-serif; } }
+  @media (min-width: 1440px) {
+    h1 {
+      font: 600 50px / 1.44 "Poppins", sans-serif; } }
 h2 {
   font: 600 20px/1.4 "Poppins", sans-serif; }
   @media (min-width: 1000px) {
     h2 {
       font: 600 28px / 1.44 "Poppins", sans-serif; } }
+  @media (min-width: 1440px) {
+    h2 {
+      font: 600 32px / 1.44 "Poppins", sans-serif; } }
 h3 {
   font: 600 28px/1.6 "Poppins", sans-serif; }
   @media (min-width: 1000px) {
@@ -170,6 +179,9 @@ header {
     top: 70px;
     background-color: #2D2D41; }
 
+main {
+  flex-grow: 1; }
+
 footer {
   display: flex;
   flex-direction: row;
@@ -194,6 +206,36 @@ footer {
     footer .footer-social ul i {
       font-size: 20px; }
 
+main:has(.not-found) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  main:has(.not-found) .not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px; }
+    main:has(.not-found) .not-found .not-found-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px; }
+      main:has(.not-found) .not-found .not-found-container hgroup {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        main:has(.not-found) .not-found .not-found-container hgroup h1, main:has(.not-found) .not-found .not-found-container hgroup h2 {
+          color: #8AB7FF; }
+      main:has(.not-found) .not-found .not-found-container img {
+        width: 96px;
+        height: 96px;
+        object-fit: contain; }
+    main:has(.not-found) .not-found .button {
+      padding-left: 20px;
+      padding-right: 20px; }
+
 /* Tablet mode (700px to 999px) */
 @media only screen and (min-width: 700px) {
   header {
@@ -213,7 +255,15 @@ footer {
     height: 700px;
     filter: blur(84px); }
   footer .design-by {
-    max-width: unset; } }
+    max-width: unset; }
+  main:has(.not-found) .not-found .not-found-container {
+    flex-direction: row;
+    gap: 34px; }
+    main:has(.not-found) .not-found .not-found-container hgroup {
+      align-items: start; }
+    main:has(.not-found) .not-found .not-found-container img {
+      width: 141px;
+      height: 141px; } }
 
 /* Desktop mode (1000px and more) */
 @media only screen and (min-width: 1000px) {
