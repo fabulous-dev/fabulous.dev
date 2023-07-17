@@ -85,10 +85,6 @@ a {
     filter: blur(72px);
     background-color: rgba(145, 133, 230, 0.8); }
   .spotlights #spotlight-bottom {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
     bottom: -240px;
     width: 360px;
     height: 360px;
@@ -118,8 +114,7 @@ header {
     flex-direction: row;
     align-items: center;
     font: 600 24px/1.4 "Jost", sans-serif;
-    text-decoration: none;
-    gap: 8px; }
+    text-decoration: none; }
     @media (min-width: 700px) {
       header .logo a {
         font: 600 25px / 1.4 "Jost", sans-serif; } }
@@ -260,10 +255,6 @@ main:has(.not-found) {
     height: 375px;
     filter: blur(90px); }
   .spotlights #spotlight-bottom {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
     bottom: -569px;
     width: 700px;
     height: 700px;
