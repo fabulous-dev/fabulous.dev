@@ -671,7 +671,7 @@ main {
 /* Desktop mode (1000px and more) */
 @media only screen and (min-width: 1000px) {
   main .hero {
-    padding-top: 88px; }
+    padding-top: 160px; }
     main .hero .spotlight {
       width: 312px;
       height: 460px;
